@@ -6,4 +6,5 @@ app_name = 'main'
 # Implemented inferfaces
 urlpatterns = [
     path('', views.index, name='index'),
+    path('htmx/items', views.items, name='items'),
 ]
