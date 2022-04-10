@@ -4,6 +4,7 @@
         {% for item in items%}
             <li class="list-group-item">
                 {{ item.value }}
+                {{ item.date }}
             </li>
         {% endfor %}
     
@@ -15,7 +16,7 @@
                 hx-swap="outerHTML" 
                 hx-post="{% url 'main:items' %}"
                 >
-                Add Hard Drive Type
+                Add
             </button>
         </li>
     </ul>
