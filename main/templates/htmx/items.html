@@ -1,0 +1,23 @@
+<form method="POST" id="items" >
+    {% csrf_token %}
+    <ul class="list-group">
+        {% for item in items%}
+            <li class="list-group-item">
+                {{ item.value }}
+            </li>
+        {% endfor %}
+    
+        <li class="list-group-item">
+            {{form.value}}
+            <button
+                class="btn btn-success"
+                hx-target="#items" 
+                hx-swap="outerHTML" 
+                hx-post="{% url 'main:items' %}"
+                >
+                Add Hard Drive Type
+            </button>
+        </li>
+    </ul>
+</form>
+
